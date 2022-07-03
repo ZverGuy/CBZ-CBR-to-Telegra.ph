@@ -1,0 +1,8 @@
+﻿/obj/
+/bin/
+/.idea/
+/appsettings.json
+/Tests/test_manga/unpack.cbz
+/Tests/test_manga/convert.webp
+/Tests/test_manga/unpacked/book_info.json
+/Tests/appsettings.json

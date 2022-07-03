@@ -1,0 +1,42 @@
+{
+    "country": "Япония",
+    "color": "MONOCHROME",
+    "chapters": 7,
+    "link": "https://readmanga.io/clear_qualia",
+    "description": "На отдаленном полуострове люди мучаются от необыкновенной болезни, называемой \" Пиноккио \". Из-за вируса части тела заболевшего начинают гибнуть, и скоро он погибает.Однако заболевание все же можно излечить, поменяв части тела на искусственные протезы, или \" махнуться \" пораженными болезнью органами с людьми-носителями особенных антител.Этих людей с особенными антителами называют \" Донорами \". Донором является лишь 1 из 10 000 человек.Когда то Дороти( донор) поменяла собственный дорогой правый глаз на Пластинку( робота-прислугу), которого собирались пустить в отход.Со дня их встречи и наступает история необыкновенной владелицы и ее слуги Пластинки.",
+    "title": "Kuria Kuoria",
+    "score": "3.89",
+    "translators": ["Sem&Ko manga project"],
+    "content_type": "MANGA",
+    "artists": ["Endou Minari"],
+    "genres": [
+        "23",
+        "19",
+        "21",
+        "5",
+        "29"
+    ],
+    "links": [
+        {
+            "link": "https://readmanga.io/clear_qualia",
+            "source": "readmanga"
+        },
+        {
+            "link": "https://mangalib.me/clear-qualia",
+            "source": "mangalib"
+        }
+    ],
+    "magazines": ["Asuka"],
+    "jap_title": "クリア・クオリア",
+    "languages": ["Русский"],
+    "age_rating": "EVERYONE",
+    "volumes": 2,
+    "published": "2007",
+    "translation_status": "COMPLETE",
+    "volume": 1,
+    "alt_title": "Чистая Кволия",
+    "publisher": "Kadokawa Shoten",
+    "censorship": "UNKNOWN",
+    "authors": ["Endou Minari"],
+    "status": "COMPLETE"
+}

@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Magick.NET-Q8-AnyCPU" Version="11.2.1" />
+      <PackageReference Include="Magick.NET.Core" Version="11.2.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0-preview.5.22301.12" />
+      <PackageReference Include="Telegram.Bot" Version="18.0.0" />
+      <PackageReference Include="WTelegramClient" Version="2.5.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="TelegramBot\TelegramBotWrapper.UpdateHandlers.cs">
+        <DependentUpon>TelegramBot.cs</DependentUpon>
+      </Compile>
+      <Compile Remove="Tests\**" />
+      <Compile Update="ChapterParserAndExtractor\ChapterParser.MetaDataParserscs">
+        <DependentUpon>ChapterParser.cs</DependentUpon>
+      </Compile>
+      <Compile Update="ChapterParserAndExtractor\ChapterParser.MetaDataParsers.cs">
+        <DependentUpon>ChapterParser.cs</DependentUpon>
+      </Compile>
+      <Compile Remove="obj\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Tests\**" />
+      <None Update="proxies.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="obj\**" />
+      <None Update="appsettings.example.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Remove="appsettings.json" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Tests\**" />
+      <EmbeddedResource Remove="obj\**" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CBZ_To_Telegraph", "CBZ_To_Telegraph.csproj", "{01DB8CE9-C9D0-41A7-9A86-8C5987E0239F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{7B1E2A9C-87CA-417C-8743-38AF723FA672}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01DB8CE9-C9D0-41A7-9A86-8C5987E0239F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DB8CE9-C9D0-41A7-9A86-8C5987E0239F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DB8CE9-C9D0-41A7-9A86-8C5987E0239F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DB8CE9-C9D0-41A7-9A86-8C5987E0239F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1E2A9C-87CA-417C-8743-38AF723FA672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1E2A9C-87CA-417C-8743-38AF723FA672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1E2A9C-87CA-417C-8743-38AF723FA672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1E2A9C-87CA-417C-8743-38AF723FA672}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

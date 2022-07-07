@@ -41,7 +41,9 @@
       <None Update="appsettings.example.json">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Remove="appsettings.json" />
+      <None Update="appsettings.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>

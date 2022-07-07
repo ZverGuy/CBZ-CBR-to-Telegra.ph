@@ -39,7 +39,7 @@ namespace CBZ_To_Telegraph.TelegramBot
             string tagsstring = GetTags(info.Tags);
             string genresstring = GetGenres(info.Genres);
             string chapters = ArticleUrlsToTextHtml(pages);
-            return $"{info.Title}\n{info.Description}\n{tagsstring}\n{genresstring}\n\n{chapters}";
+            return $"{info.Title}\n{new string(info.Description.Take(650).ToArray()) + "..."}\n{tagsstring}\n{genresstring}\n\n{chapters}";
         }
         
 

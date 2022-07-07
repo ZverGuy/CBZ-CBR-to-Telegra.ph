@@ -25,9 +25,6 @@
       <None Update="005_0000.webp">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="test_manga\convert.webp">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
       <None Update="test_manga\unpack.cbz">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>

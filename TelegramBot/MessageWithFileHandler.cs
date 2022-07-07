@@ -96,7 +96,7 @@ namespace CBZ_To_Telegraph.TelegramBot
         {
             bool result = documentMimeType switch
             {
-                "application/vnd.comicbook+zip" or "application/vnd.comicbook-rar" or "application/x-cbr" => true,
+                "application/vnd.comicbook+zip" or "application/vnd.comicbook-rar" or "application/x-cbr" or "application/x-cbz"=> true,
                 _ => false
             };
             return result;

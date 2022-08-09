@@ -147,16 +147,25 @@ namespace CBZ_To_Telegraph.ChapterParserAndExtractor
 
                         //Add the file
                         multiPartContent.Add(fileStreamContent, name: $"file", fileName: $"blob");
-                        
-                        await Task.Delay(TimeSpan.FromSeconds(_settings.UploadDelay));
-                        Debug.WriteLine("UploadScansDelay");
-                        var httpresponce = await client.PostAsync("https://telegra.ph/upload", multiPartContent);
-                        string jsonstr = httpresponce.Content.ReadAsStringAsync().Result;
-                        Debug.WriteLine(jsonstr);
 
-                        var src = JsonObject.Parse(jsonstr).AsArray();
-                        var str = src[0].AsObject()["src"].ToString();
-                        result.Add(new KeyValuePair<int, string>(s.Key, str));
+                        try
+                        {
+                            await Task.Delay(TimeSpan.FromSeconds(_settings.UploadDelay));
+                            Debug.WriteLine("UploadScansDelay");
+                            var httpresponce = await client.PostAsync("https://telegra.ph/upload", multiPartContent);
+                            string jsonstr = httpresponce.Content.ReadAsStringAsync().Result;
+                            Debug.WriteLine(jsonstr);
+                            var src = JsonObject.Parse(jsonstr).AsArray();
+                            var str = src[0].AsObject()["src"].ToString();
+                            result.Add(new KeyValuePair<int, string>(s.Key, str));
+
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine(e);
+                            throw;
+                        }
+
                     }
                 }
 
@@ -181,9 +190,21 @@ namespace CBZ_To_Telegraph.ChapterParserAndExtractor
             var responce = await client.GetAsync(
                 $"https://api.telegra.ph/createPage?access_token={_settings.AccessToken}&title={title}&content={elementsstring}&return_content=true");
             var data = await responce.Content.ReadAsStringAsync();
-            Debug.WriteLine("ArticleData: " +data);
-            ArticlePage result = JsonNode.Parse(data).AsObject()["result"].Deserialize<ArticlePage>();
-            return result;
+            
+            try
+            {
+                ArticlePage result = JsonNode.Parse(data).AsObject()["result"].Deserialize<ArticlePage>();
+                return result;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("ArticleData: " +data);
+                Console.WriteLine("content: " + elementsstring );
+                Console.WriteLine("Bytes Count:" + System.Text.Encoding.Default.GetByteCount(elementsstring));
+                throw;
+            }
+
         }
 
         public async Task<ArticlePage> UploadArticleAsync(MangaInfo info, IEnumerable<string> scansurls) =>

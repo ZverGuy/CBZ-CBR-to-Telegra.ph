@@ -98,6 +98,7 @@ namespace CBZ_To_Telegraph.ChapterParserAndExtractor
 
         public List<string> GetGenresFromBookInfoJson(JsonNode value)
         {
+            
             try
             {
                 var genresString = value.AsValue().ToString();
